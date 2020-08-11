@@ -1,0 +1,276 @@
+{
+  "settings": {
+    "siteName": "CV Template for Web",
+    "multiLang": true,
+    "langDefault": "en",
+    "langAvailable": [
+      {
+        "flag": "🇬🇧",
+        "name": "English",
+        "code": "en"
+      },
+      {
+        "flag": "🇷🇺",
+        "name": "Русский",
+        "code": "ru"
+      },
+      {
+        "flag": "🇯🇵",
+        "name": "日本語",
+        "code": "jp"
+      }
+    ],
+    "backToSite": {
+      "url": "https://github.com/userkris/cv-template-for-web",
+      "text": {
+        "en": "Back to Github",
+        "ru": "Вернуться на Github",
+        "jp": "Githubに戻る"
+      }
+    }
+  },
+  "name": {
+    "en": "Jon Doe",
+    "ru": "Джон Доу",
+    "jp": "ジョン・ドウ"
+  },
+  "occupation": {
+    "en": "Web Developer",
+    "ru": "Веб-разработчик",
+    "jp": "ウェブ開発者"
+  },
+  "profile": {
+    "title": {
+      "en": "Profile",
+      "ru": "Профиль",
+      "jp": "プロフィール"
+    },
+    "text": {
+      "en": "A strong conceptual thinker who has a keen interest in all things related to the Internet. Jon has the ability and experience needed to design and execute complex software projects for a diverse variety of users. He is committed to having an impact on the future of any company that he works for, and possesses the enthusiasm and commitment to learn and develop his career within a fast paced and growing business. He has a track record of building fluid and dynamic interfaces that are user-friendly, and which positively impact on people’s lives.",
+      "ru": "Сильный концептуальный мыслитель, который интересуется всем, что связано с Интернетом. Джон обладает способностями и опытом, необходимыми для разработки и реализации сложных программных проектов для самых разных пользователей. Он стремится оказывать влияние на будущее любой компании, в которой он работает, и обладает энтузиазмом и стремлением учиться и развивать свою карьеру в быстро меняющемся и растущем бизнесе. Он имеет опыт создания гибких и динамических интерфейсов, удобных для пользователя и положительно влияющих на жизнь людей.",
+      "jp": "インターネットに関連するすべてのものに強い関心を持っている強力な概念思想家。 ジョンは、多様なユーザー向けの複雑なソフトウェアプロジェクトを設計および実行するために必要な能力と経験を持っています。 彼は自分が働いている会社の将来に影響を与えることを約束し、急速に成長しているビジネスで彼のキャリアを学び、発展させる熱意とコミットメントを持っています。 彼は、ユーザーフレンドリーで、人々の生活に良い影響を与える、流動的で動的なインターフェースを構築した実績があります。"
+    }
+  },
+  "contact": {
+    "link": [
+        {
+          "title": "Github",
+          "url": "https://github.com/userkris/cv-template-for-web",
+          "text": "jondoe"
+        },
+        {
+          "title": "Example",
+          "url": "#",
+          "text": "example.com"
+        }
+    ],
+    "email": [
+      "jon@example.com"
+    ],
+    "location": [
+      {
+        "en": "London, UK",
+        "ru": "Лондон, Великобритания",
+        "jp": "イギリス、ロンドン"
+      }
+    ]
+  },
+  "work": {
+    "title": {
+      "en": "Work Experience",
+      "ru": "Опыт работы",
+      "jp": "実務経験"
+    },
+    "data": [
+      {
+        "title": {
+          "en": "Web Developer",
+          "ru": "Веб-разработчик",
+          "jp": "ウェブ開発者"
+        },
+        "place": {
+          "en": "Second Job Ltd"
+        },
+        "date": {
+          "en": "May 2020 - present",
+          "ru": "Май 2020 - настоящее время",
+          "jp": "2020年5月-現在"
+        },
+        "description": {
+          "en": "Worked as part of a multi-disciplinary team, carrying out ad-hoc tasks as requested by the IT Manager. Had a specific brief to ensure the websites build for customer’s precisely matched their requirements.",
+          "ru": "Работал в составе междисциплинарной команды, выполняя специальные задачи по запросу ИТ-менеджера. У меня было конкретное задание, чтобы убедиться, что сайты создаются для клиентов, точно соответствующих их требованиям.",
+          "jp": "学際的なチームの一員として働き、ITマネージャーの要求に応じて臨時のタスクを実行した。 顧客向けに構築されたWebサイトが要件に正確に一致することを保証するための具体的な説明がありました。"
+        },
+        "assets": {
+          "languages": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
+          "systems": [
+            "Vue.js",
+            "Node.js",
+            "Express.js",
+            "npm",
+            "Parcel"
+          ]
+        },
+        "features": [
+          {
+            "groupTitle": true,
+            "en": "Front-end",
+            "jp": "フロントエンド"
+          },
+          {
+            "en": "Developing and maintaining the front end functionality of websites",
+            "ru": "Разработка и поддержка веб-сайт интерфейсов",
+            "jp": "Webサイトのフロントエンド機能の開発と保守"
+          },
+          {
+            "en": "Designing prototypes for apps and websites",
+            "ru": "Разработка прототипов приложений и веб-сайтов",
+            "jp": "アプリとウェブサイトのプロトタイプを設計する"
+          },
+          {
+            "en": "Writing cross-browser compliant",
+            "ru": "Написание кросс-браузерной совместимости",
+            "jp": "クロスブラウザ対応の記述"
+          },
+          {
+            "groupTitle": true,
+            "en": "Back-end",
+            "jp": "バックエンド"
+          },
+          {
+            "en": "Involved in a project to develop RESTful API for online gaming website",
+            "ru": "Участвовал в проекте по разработке RESTful API для сайта онлайн-игр",
+            "jp": "オンラインゲームWebサイト用のRESTful APIを開発するプロジェクトに関与"
+          }
+        ]
+      },
+
+      {
+        "title": {
+          "en": "Wordpress Developer",
+          "ru": "Веб-разработчик",
+          "jp": "ウェブ開発者"
+        },
+        "place": {
+          "en": "First Job Company"
+        },
+        "date": {
+          "en": "January 2018 - March 2020",
+          "ru": "Январь 2018 - Март 2020",
+          "jp": "2018年1月〜2020年3月"
+        },
+        "description": {
+          "en": "Work with a team of four web developers who create and manage a platform for organizational development and employee education. Use JavaScript and PHP among other tools, to design the platform. Write two to four pieces of SEO content every month to use in building the company’s online ranking.",
+          "ru": "Работал в команде из четырех веб-разработчиков для создания и управления платформой для организационного развития и обучения сотрудников. Использовал JavaScript и PHP на фоне другие инструментов для разработки платформы. Разрабатывал от двух до четырех частей контента SEO каждый месяц, чтобы использовать его для построения онлайн-рейтинга компании.",
+          "jp": "組織開発と従業員教育のためのプラットフォームを作成および管理する4人のWeb開発者のチームと協力します。 他のツールの中でも特にJavaScriptとPHPを使用して、プラットフォームを設計します。 毎月2〜4個のSEOコンテンツを書き、会社のオンラインランキングの構築に使用します。"
+        },
+        "assets": {
+          "languages": [
+            "PHP",
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
+          "systems": [
+            "Wordpress"
+          ]
+        },
+        "features": [
+          {
+            "en": "Developed plugins for Wordpress",
+            "ru": "Разработывал плагины для Wordpress",
+            "jp": "Wordpress用に開発されたプラグイン"
+          },
+          {
+            "en": "Implement SEO improvements for webistes",
+            "ru": "Внедрить SEO улучшения для сайтов",
+            "jp": "WebサイトにSEOの改善を実装する"
+          }
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": {
+      "en": "Education",
+      "ru": "Образование",
+      "jp": "教育"
+    },
+    "data": [
+      {
+        "title": {
+          "en": "BSc (Hons) in Computer Science",
+          "ru": "Бакалавр компьютерных наук",
+          "jp": "コンピュータサイエンスの理学士（優等）"
+        },
+        "place": {
+          "en": "University of London, UK",
+          "ru": "Лондонский университет, Великобритания",
+          "jp": "英国ロンドン大学"
+        },
+        "date": {
+          "en": "September 2014 - June 2017",
+          "ru": "Сентябрь 2014 - Июнь 2017",
+          "jp": "2014年9月〜2017年6月"
+        },
+        "features": [
+          {
+            "en": "National Student Volunteer Award",
+            "ru": "Национальная студенческая волонтерская премия",
+            "jp": "全国学生ボランティア賞"
+          },
+          {
+            "en": "Coursework in Programming, Data Structure, and Computer Architecture",
+            "ru": "Курсовая работа по программированию, структуре данных и компьютерной архитектуре",
+            "jp": "プログラミング、データ構造、およびコンピュータアーキテクチャのコースワーク"
+          }
+        ]
+      }
+    ]
+  },
+  "hobby": {
+    "title": {
+      "en": "Hobby",
+      "ru": "Хобби",
+      "jp": "趣味"
+    },
+    "data": [
+      {
+        "emoji": "🎸",
+        "value": {
+          "en": "Music",
+          "ru": "Музыка",
+          "jp": "音楽"
+        }
+      },
+      {
+        "emoji": "🚴",
+        "value": {
+          "en": "Cycling",
+          "ru": "Катание на велосипеды",
+          "jp": "サイクリング"
+        }
+      },
+      {
+        "emoji": "🧳",
+        "value": {
+          "en": "Travelling",
+          "ru": "Путешествия",
+          "jp": "旅行"
+        }
+      },
+      {
+        "emoji": "🥘",
+        "value": {
+          "en": "Cooking",
+          "ru": "Приготовление еды",
+          "jp": "料理"
+        }
+      }
+    ]
+  }
+}

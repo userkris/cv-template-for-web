@@ -1,0 +1,207 @@
+<main>
+
+  <!-- Navigation -->
+  <nav>
+    <a
+      v-if="settings.backToSite"
+      :href="settings.backToSite.url"
+      class="button"
+      v-html="settings.backToSite.text ? settings.backToSite.text[lang] || settings.backToSite.text[settings.langDefault] : 'Back to site'"
+    ></a>
+    <button
+      v-if="settings.multiLang && settings.langAvailable"
+      v-for="(item, index) in settings.langAvailable"
+      :key="'lang-' + index"
+      v-on:click="setLanguage(item.code)"
+    >
+        {{ item.flag }} {{ item.name }}
+      </button>
+  </nav>
+
+
+
+
+
+  <transition name="fade">
+    <div class="content-wrapper" v-if="show">
+
+      <!-- Header -->
+      <section class="header">
+        <h1 :occupation="renderLang(occupation)" v-html="renderLang(name)" class="name"></h1>
+
+        <address v-if="contact">
+
+          <a
+            v-if="contact.link"
+            v-for="(item, index) in contact.link"
+            :style="linkIcon(item.title) === null ? '--icon: var(--graphic)' : '--icon: url(' + linkIcon(item.title) + ')'"
+            :key="index"
+            :href="item.url"
+            :title="item.title"
+            target="_blank"
+            v-html="item.text"
+          ></a>
+
+          <a
+            v-if="contact.email"
+            v-for="(item, index) in contact.email"
+            :style="linkIcon('Email') === null ? '--icon: var(--graphic)' : '--icon: url(' + linkIcon('Email') + ')'"
+            :key="index"
+            :href="'mailto:' + item"
+            v-html="item"
+          ></a>
+
+          <span
+            v-if="contact.location"
+            v-for="(item, index) in contact.location"
+            :key="index"
+            v-html="renderLang(item)"
+            :style="linkIcon('Location') === null ? '--icon: var(--graphic)' : '--icon: url(' + linkIcon('Location') + ')'"
+          ></span>
+
+        </address>
+
+      </section>
+
+
+
+
+
+      <!-- Profile -->
+      <section v-if="this.profile">
+        <h2 v-html="renderLang(profile.title)"></h2>
+
+        <!-- Item Description -->
+        <p v-if="profile.text" v-html="renderLang(profile.text)" class="description"></p>
+
+      </section>
+
+
+
+
+
+      <!-- Work Experience -->
+      <section v-if="this.work">
+
+        <!-- Section Title -->
+        <h2 v-html="renderLang(work.title)"></h2>
+
+        <div v-for="(item, index) in work.data" :key="'work-' + index" class="section-item">
+
+          <!-- Item Title -->
+          <h3 v-html="renderLang(item.title)"></h3>
+
+          <!-- Item Place -->
+          <span v-html="renderLang(item.place)" :date="date(item)" class="place"></span>
+
+          <!-- Item Description -->
+          <p v-if="item.description" v-html="renderLang(item.description)" class="description"></p>
+
+          <!-- Item Languages -->
+          <ul v-if="item.assets" class="row-items">
+            <a v-for="(subitem, i) in renderAssets(item.assets.languages)"
+              :key="i"
+              :title="subitem.name"
+              :href="subitem.url"
+              target="_blank"
+              :style="'--color:' + subitem.color"
+            >
+              <li
+                :data-icon="subitem.icon ? 'true' : null"
+                :style="subitem.icon ? '--icon: url(' + subitem.icon + ')' : '--icon: var(--graphic)'"
+                v-html="subitem.name"
+              >
+            </li>
+            </a>
+          </ul>
+
+          <!-- Item Systems -->
+          <ul v-if="item.assets" class="row-items">
+            <a v-for="(subitem, i) in renderAssets(item.assets.systems, 'systems')"
+              :key="i"
+              :title="subitem.name"
+              :href="subitem.url"
+              target="_blank"
+              :style="'--color:' + subitem.color"
+            >
+              <li
+                :data-icon="subitem.icon ? 'true' : null"
+                :style="subitem.icon ? '--icon: url(' + subitem.icon + ')' : '--icon: var(--graphic)'"
+                v-html="subitem.name"
+              >
+            </li>
+            </a>
+          </ul>
+
+          <!-- Item Features -->
+          <ul v-if="item.features.length !== 0" class="features-list"> <!-- Error: Firefox 68.10 <ul v-if="item.features?.length"> -->
+            <li
+              :class="(feature.groupTitle === true) ? 'group-title' : null"
+              v-for="(feature, index) in item.features"
+              :key="'feature-' + index"
+              v-if="feature[lang] || feature[settings.langDefault]"
+              v-html="feature[lang] ? feature[lang] : feature[settings.langDefault]"
+            ></li>
+          </ul>
+
+        </div>
+
+      </section>
+
+
+
+
+
+      <!-- Education -->
+      <section v-if="this.education">
+        <!-- Section Title -->
+        <h2 v-html="renderLang(education.title)"></h2>
+
+        <div v-for="(item, index) in education.data" :key="'education-' + index" class="section-item">
+
+          <!-- Item Title -->
+          <h3 v-html="renderLang(item.title)"></h3>
+
+          <!-- Item Place -->
+          <span v-html="renderLang(item.place)" :date="date(item)" class="place"></span>
+
+          <!-- Item Description -->
+          <p v-if="item.description" v-html="renderLang(item.description)" class="description"></p>
+
+          <!-- Item Features -->
+          <ul v-if="item.features.length !== 0" class="features-list"> <!-- Error: Firefox 68.10 <ul v-if="item.features?.length"> -->
+            <li
+              :class="(feature.groupTitle === true) ? 'group-title' : null"
+              v-for="(feature, index) in item.features"
+              :key="'feature-' + index"
+              v-if="feature[lang] || feature[settings.langDefault]"
+              v-html="feature[lang] ? feature[lang] : feature[settings.langDefault]"
+            ></li>
+          </ul>
+
+        </div>
+
+      </section>
+
+
+
+
+
+      <!-- Hobby -->
+      <section v-if="this.hobby" class="hobby">
+        <h2 v-html="renderLang(hobby.title)"></h2>
+
+        <ul v-if="hobby.data" class="row-items">
+          <li
+            v-for="item in hobby.data"
+            :emoji="item.emoji ? item.emoji : null"
+            v-html="renderLang(item.value)"
+          ></li>
+        </ul>
+
+      </section>
+
+    </div>
+  </transition>
+
+</main>

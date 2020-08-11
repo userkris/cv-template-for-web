@@ -1,0 +1,23 @@
+{
+  "name": "cv-template-for-web",
+  "version": "1.0.0",
+  "description": "Small CV application.",
+  "main": "./index.js",
+  "scripts": {
+    "dist": "node ./scripts/dist-clear.js && node ./src/index.js && parcel build ./src/index.html --public-url ./ --no-cache --no-source-maps",
+    "dist:clear": "node ./scripts/dist-clear.js",
+    "dev": "node ./src/index.js && node ./scripts/dev-clear.js && parcel ./src/index.html --no-cache --no-source-maps -d ./dev",
+    "dev:createHtmlOnly": "node ./src/index.js",
+    "dev:clear": "node ./scripts/dev-clear.js"
+  },
+  "author": "Kris Kofler",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "dependencies": {
+    "del": "^5.1.0",
+    "nodemon": "^2.0.4",
+    "vue": "^2.6.11"
+  }
+}
