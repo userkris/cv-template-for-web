@@ -4,6 +4,7 @@ Please see [demo here.](https://kodekris.com/cv-demo/)
 
 ## How to Use
 [Node.js](https://nodejs.org/en/) required.
+- Run ```npm install``` in **package.json** directory to install dependencies
 - Make your **data.json** file with your CV content. Use **./data/data.json** as a template
 - Run ```npm run dev``` and check your CV on **localhost:1234** via browser to make sure it looks OK
 - Run ```npm run dist``` to build minified version
