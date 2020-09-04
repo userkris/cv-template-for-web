@@ -363,7 +363,7 @@ h3 {
   padding-left: 1rem;
 }
 .features-list li {
-  margin: .5rem 0;
+  margin: .5rem 0 .5rem -1rem;
 }
 .features-list li.group-title {
   font-size: 1.2rem;
@@ -380,6 +380,11 @@ h3 {
 }
 .features-list:first-child.group-title {
   margin: 0 0 .5rem 0;
+}
+.features-list li div {
+  vertical-align: top;
+  width: 90%;
+  display: inline-block;
 }
 
 
@@ -434,11 +439,14 @@ section {
   }
   .header {
     display: block;
-    text-align: center;
+    text-align: left;
   }
   address {
-    margin: calc(var(--size) * 3) auto 0 auto;
+    margin: calc(var(--size) * 3) 0 0 0;
     width: max-content;
+  }
+  .hobby ul {
+    flex-direction: column;
   }
 }
 @media only screen and (orientation: landscape) {

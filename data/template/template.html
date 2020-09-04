@@ -140,8 +140,9 @@
               v-for="(feature, index) in item.features"
               :key="'feature-' + index"
               v-if="feature[lang] || feature[settings.langDefault]"
-              v-html="feature[lang] ? feature[lang] : feature[settings.langDefault]"
-            ></li>
+            >
+              <div v-html="feature[lang] ? feature[lang] : feature[settings.langDefault]"></div>
+            </li>
           </ul>
 
         </div>
@@ -175,8 +176,9 @@
               v-for="(feature, index) in item.features"
               :key="'feature-' + index"
               v-if="feature[lang] || feature[settings.langDefault]"
-              v-html="feature[lang] ? feature[lang] : feature[settings.langDefault]"
-            ></li>
+            >
+              <div v-html="feature[lang] ? feature[lang] : feature[settings.langDefault]"></div>
+            </li>
           </ul>
 
         </div>
