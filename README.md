@@ -1,6 +1,6 @@
 # CV Template for Web
 Simple **CV**(Curriculum Vitae) template for Web. Supports multiple languages.
-Please see [demo here.](https://kodekris.com/cv-demo/)
+Please see [demo here.](https://kodekris.com/demo/cv-template-for-web/)
 
 ## How to Use
 [Node.js](https://nodejs.org/en/) required.
